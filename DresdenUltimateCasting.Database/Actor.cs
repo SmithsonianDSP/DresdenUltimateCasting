@@ -14,8 +14,12 @@ namespace DresdenUltimateCasting.Database
             ActorImages = new HashSet<ActorImage>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ActorId { get; set; }
 
+        [Required]
+        [ForeignKey("Character")]
         public int CharacterId { get; set; }
 
         [Required]
@@ -27,6 +31,8 @@ namespace DresdenUltimateCasting.Database
 
         [StringLength(510)]
         public string Description { get; set; }
+
+        public short? RankOrder { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ActorImage> ActorImages { get; set; }

@@ -56,9 +56,12 @@
     <Compile Include="Actor.cs" />
     <Compile Include="ActorImage.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="CharacterTag.cs" />
     <Compile Include="DuccaDbContext.cs" />
+    <Compile Include="DuccaDbContextFactory.cs" />
     <Compile Include="Faction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

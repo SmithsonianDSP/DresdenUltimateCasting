@@ -14,6 +14,8 @@ namespace DresdenUltimateCasting.Database
             Characters = new HashSet<Character>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int FactionId { get; set; }
 
         [Required]

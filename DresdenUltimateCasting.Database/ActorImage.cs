@@ -9,12 +9,17 @@ namespace DresdenUltimateCasting.Database
     public partial class ActorImage
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ImageId { get; set; }
 
+        [Required]
+        [ForeignKey("Actor")]
         public int ActorId { get; set; }
 
         [StringLength(500)]
         public string ImageUrl { get; set; }
+
+        public short DisplayOrder { get; set; }
 
         public virtual Actor Actor { get; set; }
     }
