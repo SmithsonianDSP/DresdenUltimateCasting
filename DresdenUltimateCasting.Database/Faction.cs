@@ -22,6 +22,10 @@ namespace DresdenUltimateCasting.Database
         [StringLength(125)]
         public string FactionName { get; set; }
 
+        [StringLength(510)]
+        public string FactionDescription { get; set; }
+
+
         public int SortOrder { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
